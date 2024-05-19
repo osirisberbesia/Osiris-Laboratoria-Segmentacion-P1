@@ -4,8 +4,8 @@
 
 ### Objetivos:
 
-Mantener y aumentar sus ingresos mediante una mejor comprensión de su base de clientes y la personalización de sus estrategias de marketing y retención.
-Preparar la base de datos que pone a disposición la empresa para que se pueda aplicar la segmentación de clientes a través de RFM, entender el resultado de la segmentación  y sacar conclusiones que posibiliten a la empresa a tomar decisiones, además de buscar información importante que se encuentra oculta en los datos.
+
+Preparar la información de la base de datos y aplicar la segmentación de clientes a través de RFM, entender el resultado de la segmentación  y sacar conclusiones que posibiliten a la empresa a tomar decisiones, las cuales son requeridas por parte de la empresa para mantener y aumentar sus ingresos, además buscar información importante que se encuentra oculta en los datos.
 
 ### Equipo:
 
@@ -17,13 +17,21 @@ Describe si trabajaste en dupla o individualmente.
 * OpenAI - ChatGPT
 
 
-Lista las principales herramientas y tecnologías utilizadas en el proyecto, como lenguajes de programación, herramientas de visualización (por ejemplo: Hojas de cálculo, Looker Studio) y otras tecnologías relevantes.
-
 ### Procesamiento y análisis:
 
+* Antes de la exploración de datos, se importan los datos de los tres data_sets recibidos en un solo documento con la formula IMPORTRANGE.
+* Una vez realizada la importación de datos, se procede a la busqueda de nulos para tomar decisiones acerca de estos.
+* Para los data_set clientes, transacciones, y resumen se agregará una columna adicional para la formula "countblank" y así poder determinar con mejor exactitud cuales acciones tomar
+    * Para el data_set clientes, la categoria ingreso_anual_dolar tiene un total de 24 clientes con esta información en nulo, en este data_set, para no eliminar a los clientes, se establecerá un valor de -1 de forma que:
+        - Todos los clientes que tengan valor -1 en su ingreso_anual_dolar, se debe crear una alerta para actualizar la información del mismo. 
+    * Para el data_set transacciones, existen los siguientes nulos:
+    ![alt text](image.png)
+    Los cuales, al no tener el ID del cliente ni otra fuente de datos para recuperar la información faltante, se decide borrar estos.
+    
 Describe los procesos de limpieza y exploración de datos, las técnicas de análisis aplicadas, etc.
 
 ### Resultados y Conclusiones:
+
 
 Presenta los principales resultados obtenidos a partir del análisis de datos.
 Resume las conclusiones extraídas del proyecto, incluyendo ideas importantes, descubrimientos relevantes y posibles recomendaciones.
