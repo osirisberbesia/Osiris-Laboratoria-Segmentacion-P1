@@ -25,5 +25,3 @@ Sugiere posibles próximos pasos para extender o mejorar el proyecto de análisi
 
 Enlaces de interés:
 Incluye el enlace a la hoja de cálculo donde desarrollaste el proyecto y/o un enlace a tu dashboard (marco 3), además de otros recursos creados para este proyecto que consideres interesante compartir.
-ñldfjg´sod
-zxfkzxcvzxc
