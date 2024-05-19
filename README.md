@@ -1,7 +1,6 @@
-# Osiris-Laboratoria
-Ficha Técnica: Proyecto de Análisis de Datos. Segmentación Proyecto 1 
+# Proyecto de Análisis de Datos.
+## Segmentación Proyecto 1 
 
-Título del Proyecto: Nombre del Proyecto
 
 Objetivo:
 Describe brevemente el objetivo principal del proyecto de análisis de datos.
