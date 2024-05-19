@@ -26,8 +26,13 @@ Describe si trabajaste en dupla o individualmente.
         - Todos los clientes que tengan valor -1 en su ingreso_anual_dolar, se debe crear una alerta para actualizar la información del mismo. 
     * Para el data_set transacciones, existen los siguientes nulos:
     ![alt text](image.png)
-    Los cuales, al no tener el ID del cliente ni otra fuente de datos para recuperar la información faltante, se decide borrar estos.
+    Los cuales, al no tener el ID del cliente ni otra fuente de datos para recuperar la información faltante, se decide omitir estos, los cuales, serán identificados con un 0 para omitir.
+    * Para el data_set resumen_compras, no existe ninguna categoria con nulos. Por lo cual se trabajará con la información de todo el data set segun aplique.
+    * * Para los data_sets que tienen nulos y se deben modificar a  -1 y 0 según lo explicado anteriormente, al ser data_sets importados, no se puede modificar la información dentro de ellos, por lo cual se hará una columna adicional, donde se recorra cada categoria donde están los nulos y modifique los datos a -1 o 0 según corresponda la ubicación del nulo, y se trabajará con esta columna auxiliar.
+
     
+
+
 Describe los procesos de limpieza y exploración de datos, las técnicas de análisis aplicadas, etc.
 
 ### Resultados y Conclusiones:
