@@ -19,6 +19,8 @@ Describe si trabajaste en dupla o individualmente.
 
 ### Procesamiento y análisis:
 
+#### Procesamiento
+
 * Antes de la exploración de datos, se importan los datos de los tres data_sets recibidos en un solo documento con la formula IMPORTRANGE.
 * Una vez realizada la importación de datos, se procede a la busqueda de nulos para tomar decisiones acerca de estos.
 * Para los data_set clientes, transacciones, y resumen se agregará una columna adicional para la formula "countblank" y así poder determinar con mejor exactitud cuales acciones tomar
@@ -35,12 +37,21 @@ Describe si trabajaste en dupla o individualmente.
         * id_cliente si se repite, sin embargo, es totalmente válido en este escenario.
     * En resumen_compras, el valor id_cliente, está duplicado, y para este escenario, el valor no debería de estarlo. Se podría evaluar hacer la suma de los montos, si estos fueran diferentes, pero en este caso, desde ID hasta el último dato, todo esta duplicado, por lo cual en este caso los valores duplicados si deben eliminarse, sin embargo, al tratarse de información extraida con IMPORTRANGE no se puede eliminar esto, más si se podría hacer una segunda columna auxiliar para asignarle el valor "NO" a los duplicados y asi no tomarlos en cuenta en los análisis.
 
-    
+* Valores fuera del alcance del análisis, para el data set transacciones, las transacciones que no tengan id_cliente, son valores fuera del alcance del análisis.
 
+Para cambiar los valores a -1 en el data set donde corresponde la sustitución de la información por lo valores nulos, se utiliza una función que recorra y corrobore donde hay nulos para sustituirlos por los valores comentados.
+Para el data set tranasacciones, se realiza una query que traiga los datos del origen sin los nulos.
+=QUERY(IMPORTRANGE("https://docs.google.com/spreadsheets/d/1dD2UF-XPWjPu7pkApGCQ1uIIVA0gAcZ-Qk4LPmxX10A/edit","transacciones!A:D"), "SELECT * WHERE Col1 IS NOT NULL AND Col2 IS NOT NULL AND Col3 IS NOT NULL AND Col4 IS NOT NULL", 1)
 
+Para el data set resumen compras, se utiliza la función UNIQUE para eliminar los valores duplicados a nivel vista, ya que no estaremos trabajando con ellos, y son iguales de principio a fin.
 
+=UNIQUE(IMPORTRANGE("https://docs.google.com/spreadsheets/d/1Tkg0lYsAiwu6CB6slktwUMdayWTvBq80SyX16r-xEVA/edit","resumen_compras!A:G"))
 
-Describe los procesos de limpieza y exploración de datos, las técnicas de análisis aplicadas, etc.
+##### Unificación de tablas
+
+![alt text](2image.png)
+
+En la unificación de tablas se muestra la información para medir la frecuencia, cuan reciente y valor monetario por cliente, sumando, también para poder brindarle a la empresa una información más completa acerca de donde poner los refuerzos, lo que sería la generación del cliente. 
 
 ### Resultados y Conclusiones:
 
