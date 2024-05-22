@@ -47,6 +47,21 @@ Para el data set resumen compras, se utiliza la función UNIQUE para eliminar lo
 
 =UNIQUE(IMPORTRANGE("https://docs.google.com/spreadsheets/d/1Tkg0lYsAiwu6CB6slktwUMdayWTvBq80SyX16r-xEVA/edit","resumen_compras!A:G"))
 
+Otro valor fuera del alcance del análisis sería el id_transaccion, ya que es un dato no requerido para el análisis.
+
+
+##### Nuevas variables:
+
+* categoria_salario: es la promediación de los salarios para conocer en cual rango salarial está nuestro cliente
+* generacion_cliente: define generación del cliente según el año de nacimiento
+* primera_transaccion: fecha según registros de que el cliente hizo la primera transacción con nosotros
+* ultima_transaccion: última fecha de transacción del cliente en el negocio
+* cantidad_transacciones: cantidad total de transacciones del cliente en el negocio
+* transacciones_en_linea: cuantas transacciones del cliente han sido en linea
+* transacciones_tienda: cuantas transacciones del cliente han sido en tienda
+* valor_monetario: valor total de las compras hechas por el cliente
+* compras_proteinas: sumatoria de compras de pescado + pollo.
+
 ##### Unificación de tablas
 
 ![alt text](2image.png)
