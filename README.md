@@ -188,9 +188,10 @@ Para los clientes más tradicionales, incluyendo a los más leales, no se puede 
 ### Limitaciones/Próximos Pasos:
 
 #### Limitaciones
-    * Ausencia de información adicional entre las transacciones y el detalle de las mismas. Es decir, que se pudiera relacionar la información del id_cliente con el lugar de la transaccion y la fecha, sino también el detalle de la misma, para poder analizar la tendencia de compra de este. Por ejemplo, cual vino, cuales productos entran dentro de la categoria "otros".
-    * Dentro de los datos para trabajar, se considera importante hacer una segmentación por genero, información que tampoco se tenía. Esto, junto a la ubicación del cliente, sea en linea cuando pidió online, o donde vive, podría haber servido para identificar si la transacción fue única, porque una persona pasaba por ahí de casualidad, si es un cliente que compra porque vive cerca, u otra información escondida importante.
-    * En los datos que se obtienen del cliente, incluye el año de nacimiento pero no tenemos correo electrónico para enviar información, campaña o promociones. E incluso, número de teléfono sería necesario recaudar.
+
+* Ausencia de información adicional entre las transacciones y el detalle de las mismas. Es decir, que se pudiera relacionar la información del id_cliente con el lugar de la transaccion y la fecha, sino también el detalle de la misma, para poder analizar la tendencia de compra de este. Por ejemplo, cual vino, cuales productos entran dentro de la categoria "otros".
+* Dentro de los datos para trabajar, se considera importante hacer una segmentación por genero, información que tampoco se tenía. Esto, junto a la ubicación del cliente, sea en linea cuando pidió online, o donde vive, podría haber servido para identificar si la transacción fue única, porque una persona pasaba por ahí de casualidad, si es un cliente que compra porque vive cerca, u otra información escondida importante.
+* En los datos que se obtienen del cliente, incluye el año de nacimiento pero no tenemos correo electrónico para enviar información, campaña o promociones. E incluso, número de teléfono sería necesario recaudar.
 
 
 #### Próximos pasos
